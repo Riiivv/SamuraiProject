@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.12.35707.178
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SamuraiProject.API", "SamuraiProject\SamuraiProject.API.csproj", "{D983AEE4-EC80-415B-999B-8235BFE1DD86}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SamuraiProject.Library", "SamuraiProject.Library\SamuraiProject.Library.csproj", "{BEFF8875-1FD4-48F2-845F-945315B9D80F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D983AEE4-EC80-415B-999B-8235BFE1DD86}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D983AEE4-EC80-415B-999B-8235BFE1DD86}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D983AEE4-EC80-415B-999B-8235BFE1DD86}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D983AEE4-EC80-415B-999B-8235BFE1DD86}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BEFF8875-1FD4-48F2-845F-945315B9D80F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BEFF8875-1FD4-48F2-845F-945315B9D80F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BEFF8875-1FD4-48F2-845F-945315B9D80F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BEFF8875-1FD4-48F2-845F-945315B9D80F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
