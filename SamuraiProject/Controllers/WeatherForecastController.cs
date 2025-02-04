@@ -1,6 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
 
-namespace SamuraiProject.Controllers
+namespace SamuraiProject.API.Controllers
 {
     [ApiController]
     [Route("[controller]")]

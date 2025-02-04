@@ -1,6 +1,9 @@
 
-namespace SamuraiProject
+namespace SamuraiProject.API
 {
+    using Microsoft.EntityFrameworkCore;
+    using SamuraiProject.Library.Models;
+
     public class Program
     {
         public static void Main(string[] args)
@@ -10,6 +13,11 @@ namespace SamuraiProject
             // Add services to the container.
 
             builder.Services.AddControllers();
+
+            string connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
+            builder.Services.AddDbContext<DatabaseContext>(options => options.UseSqlServer(connectionString));
+
+
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();

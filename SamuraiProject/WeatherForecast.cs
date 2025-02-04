@@ -1,4 +1,4 @@
-namespace SamuraiProject
+namespace SamuraiProject.API
 {
     public class WeatherForecast
     {
