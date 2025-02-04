@@ -19,10 +19,5 @@ namespace SamuraiProject.Library.Models
 
         }
         public DbSet<Samurai> Samurai { get; set; } // this is a table, named Samurai, PK SamuraiId
-
-        protected override void OnModelCreating(ModelBuilder modelBuilder)
-        {
-
-        }
     }
 }
