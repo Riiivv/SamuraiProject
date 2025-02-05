@@ -1,3 +1,4 @@
+﻿using SamuraiProject.Library.Interface;
 using SamuraiProject.Library.Models;
 using System;
 using System.Collections.Generic;
@@ -5,23 +6,19 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-using SamuraiProject.Library.Interface;
-
 namespace SamuraiProject.Library.Repositories
 {
-    public class SamuraiRepo : ISamurai
+    public class WeaponRepo : IWeapon
     {
         DatabaseContext ctx;
 
-        public SamuraiRepo(DatabaseContext context)
+        public WeaponRepo(DatabaseContext context)
         {
             ctx = context;
         }
-
-        public List<Samurai> GetSamurais()
+        public List<Weapon> GetWeapons()
         {
-            return ctx.Samurai.ToList();
+            return ctx.Weapons.ToList();
         }
-        
     }
 }
