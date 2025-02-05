@@ -27,5 +27,15 @@ namespace SamuraiProject.Library.Repositories
         {
             return ctx.Horse.Where(h => h.Id == horseId).Select(h => h.Samurai).FirstOrDefault();
         }
+
+        public List<Horse> GetHorsesByName(string name)
+        {
+            return ctx.Horse.Where(h => h.Name == name).ToList();
+        }
+
+        public Horse GetHorseById(int id)
+        {
+            return ctx.Horse.Where(h => h.Id == id).FirstOrDefault();
+        }
     }
 }

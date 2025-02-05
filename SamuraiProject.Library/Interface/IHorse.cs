@@ -11,5 +11,7 @@ namespace SamuraiProject.Library.Interface
     {
         public List<Horse> GetHorses();
         public Samurai GetSamuraiByHorse(int horseId);
+        public List<Horse> GetHorsesByName(string name);
+        public Horse GetHorseById(int id);
     }
 }

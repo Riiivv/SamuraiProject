@@ -1,4 +1,4 @@
-﻿using SamuraiProject.Library.Interface;
+using SamuraiProject.Library.Interface;
 using SamuraiProject.Library.Models;
 using System;
 using System.Collections.Generic;
@@ -34,6 +34,26 @@ namespace SamuraiProject.Library.Repositories
             SaH1.Samurai = test1;
             SaH1.Horse = test2;
             return SaH1;
+        }
+
+        public Weapon GetWeaponById(int id)
+        {
+            return ctx.Weapons.Where(w => w.Id == id).FirstOrDefault();
+        }
+
+        public List<Weapon> GetWeaponsByName(string name)
+        {
+            return ctx.Weapons.Where(w => w.Name == name).ToList();
+        }
+
+        public List<Weapon> GetWeaponsByType(string type)
+        {
+            return ctx.Weapons.Where(w => w.Type == type).ToList();
+        }
+
+        public List<Weapon> GetWeaponsBySamurai(int samuraiId)
+        {
+            return ctx.Weapons.Where(w => w.samuraiId == samuraiId).ToList();
         }
     }
 }
