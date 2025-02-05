@@ -18,7 +18,8 @@ namespace SamuraiProject.Library.Models
         {
 
         }
-        public DbSet<Samurai> Samurai { get; set; } // this is a table, named Samurai, PK SamuraiId
         public DbSet<Weapon> Weapons { get; set; }
+        public DbSet<Samurai> Samurai { get; set; } // this is a table, named Samurai, PK SamuraiId
+        public DbSet<Horse> Horse { get; set; }
     }
 }
