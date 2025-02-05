@@ -9,12 +9,25 @@ using System.Threading.Tasks;
 
 namespace SamuraiProject.Library.Repositories
 {
-    public class BattleRepo :IBattle
+    public class BattleRepo : IBattle
     {
-        DatabaseContext cxt;
-        public BattleRepo(DatabaseContext context) 
+        DatabaseContext ctx;
+        public BattleRepo(DatabaseContext context)
         {
-
+            ctx = context;
+        }
+        public List<Battle> GetBattles()
+        {
+            return ctx.Battle.ToList();
+        }
+        public List<Samurai> GetSamuraiByBattleId(int battleId)
+        {
+            return ctx.Battle.Where(b => b.BattleId == battleId).SelectMany(battle => battle.Samurais).ToList();
+        }
+        public List<Battle> GetBattlesBySamuraiId(int SamuraiId)
+        {
+            Samurai samurai = ctx.Samurai.Where(s => s.Id == SamuraiId).FirstOrDefault();
+            return samurai.Battles;
         }
     }
 }

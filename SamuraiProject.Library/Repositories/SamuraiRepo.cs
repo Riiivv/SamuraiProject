@@ -22,6 +22,5 @@ namespace SamuraiProject.Library.Repositories
         {
             return ctx.Samurai.ToList();
         }
-        
     }
 }
