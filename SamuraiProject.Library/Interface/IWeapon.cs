@@ -10,5 +10,7 @@ namespace SamuraiProject.Library.Interface
     internal interface IWeapon
     {
         public List<Weapon> GetWeapons();
+        public Samurai GetSamuraiByWeapon(int weaponId);
+        public SamuraiAndHorse GetSamuraiAndHorseByWeapon(int WeaponId);
     }
 }

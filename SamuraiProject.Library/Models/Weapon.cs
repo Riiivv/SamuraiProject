@@ -13,6 +13,8 @@ namespace SamuraiProject.Library.Models
         public string Name { get; set; }
         public string Description { get; set; }
         public string Type { get; set; }
+        public int samuraiId { get; set; }
+        public Samurai Samurai { get; set; }
 
     }
 }
