@@ -1,4 +1,4 @@
-﻿using Microsoft.EntityFrameworkCore.Storage;
+using Microsoft.EntityFrameworkCore.Storage;
 using SamuraiProject.Library.Interface;
 using SamuraiProject.Library.Models;
 using System;
@@ -15,6 +15,26 @@ namespace SamuraiProject.Library.Repositories
         public BattleRepo(DatabaseContext context)
         {
             ctx = context;
+        }
+
+        public List<Battle> GetBattlesNewerThan(DateTime date)
+        {
+            return ctx.Battle.Where(x => x.StartDate > date).ToList();
+        }
+
+        public List<Battle> GetBattlesOlderThan(DateTime date)
+        {
+            return ctx.Battle.Where(x => x.StartDate < date).ToList();
+        }
+
+        public List<Battle> GetEndedBattles()
+        {
+            return ctx.Battle.Where(x => x.EndDate != null).ToList();
+        }
+
+        public List<Battle> GetActiveBattles()
+        {
+            return ctx.Battle.Where(x => x.EndDate == null).ToList();
         }
         public List<Battle> GetBattles()
         {

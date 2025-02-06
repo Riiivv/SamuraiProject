@@ -4,7 +4,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
+using System.Text.Json.Serialization;
+using System.ComponentModel.DataAnnotations.Schema;
 namespace SamuraiProject.Library.Models
 {
     public class Weapon
@@ -14,7 +15,10 @@ namespace SamuraiProject.Library.Models
         public string Description { get; set; }
         public string Type { get; set; }
         public int samuraiId { get; set; }
-        public Samurai Samurai { get; set; }
+
+        [ForeignKey("SamuraiId")]
+        [JsonIgnore]
+        public virtual Samurai? Samurai { get; set; }
 
     }
 }

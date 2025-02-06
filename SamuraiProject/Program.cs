@@ -3,6 +3,11 @@ namespace SamuraiProject.API
 {
     using Microsoft.EntityFrameworkCore;
     using SamuraiProject.Library.Models;
+    using System.Text.Json.Serialization;
+    using Microsoft.OpenApi.Models;
+    using Swashbuckle.AspNetCore.SwaggerGen;
+
+
 
     public class Program
     {
@@ -11,7 +16,6 @@ namespace SamuraiProject.API
             var builder = WebApplication.CreateBuilder(args);
 
             // Add services to the container.
-
             builder.Services.AddControllers();
 
             string connectionString = builder.Configuration.GetConnectionString("DefaultConnection");

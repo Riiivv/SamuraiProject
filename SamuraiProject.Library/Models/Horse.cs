@@ -1,4 +1,6 @@
 namespace SamuraiProject.Library.Models;
+using System.Text.Json.Serialization;
+using System.ComponentModel.DataAnnotations.Schema;
 
 public class Horse
 {
@@ -6,5 +8,8 @@ public class Horse
     public string Name { get; set; }
     public string Description { get; set; }
     public int SamuraiId { get; set; } // FK to Samurai
-    public Samurai Samurai { get; set; } // Navigation property
+
+    [ForeignKey("SamuraiId")]
+    [JsonIgnore]
+    public virtual Samurai? Samurai { get; set; } // Navigation property
 }

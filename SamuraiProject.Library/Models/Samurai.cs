@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Text.Json.Serialization;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace SamuraiProject.Library.Models
 {
@@ -11,6 +13,8 @@ namespace SamuraiProject.Library.Models
         public int Id { get; set; }
         public string Name { get; set; }
         public string Description { get; set; }
-        public List<Battle> Battles { get; set; }
+
+        [JsonIgnore]
+        public virtual List<Battle>? Battles { get; set; }
     }
 }
